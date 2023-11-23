@@ -1,18 +1,19 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main()
-{
-    
-int arr[]={15,7,4,11,11,2};
-
-int min=arr[0];
-
-for(int i=1; i<6; i++){
-    if(arr[i]<min) min=arr[i];
-    printf("new min is %d\n",min);//to check if its working correctly
+int findmin(int arr[],int n){
+    int min=arr[0];
+    for(int i=1; i<n; i++){
+        if(arr[i]<min){
+            min=arr[i];
+        }
+    }
+    return min;
 }
-    printf("minumum number is %d",min);
+
+int main(){
+    int arr[]={15,12,9,11,4,5,8};
     
-return 0;    
-    
+    int x=findmin(arr,7);
+    printf("%d",x);
+    return 0;
 }
